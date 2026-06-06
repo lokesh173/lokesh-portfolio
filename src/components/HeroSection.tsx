@@ -96,7 +96,7 @@ const HeroSection = () => {
         preload="auto"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/intro.mp4" type="video/mp4" />
+        <source src="/hero.mp4" type="video/mp4" />
       </video>
 
       {/* Cinematic gradient overlays */}
@@ -135,7 +135,7 @@ const HeroSection = () => {
           <div className="w-full max-w-7xl px-6 md:px-10">
             <FadeIn delay={0.3} y={20}>
               <p className="mb-4 text-[10px] sm:text-xs font-medium uppercase tracking-[0.35em] text-white/60">
-                Portfolio · 2026
+                Portfolio � 2026
               </p>
             </FadeIn>
 
@@ -144,13 +144,13 @@ const HeroSection = () => {
                 className="font-black uppercase leading-[0.88] tracking-tight text-white"
                 style={{ fontSize: 'clamp(3rem, 12vw, 10.5rem)' }}
               >
-                Harsh<br />Goyal
+                Lokesh<br />Reddy
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.85} y={20}>
               <p className="mt-5 md:mt-7 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-[0.3em] text-white/75">
-                Developer · Designer · GenAI Integration
+                Aspiring Python Developer | Passionate About Building Real-World Solutions
               </p>
             </FadeIn>
           </div>
@@ -222,3 +222,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
