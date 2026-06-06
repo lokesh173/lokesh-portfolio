@@ -5,6 +5,7 @@ const EXPERIENCE = [
     number: "01",
     title: "Python Developer Intern",
     company: "VXL IT Solutions (Remote)",
+    logo: "/vxl-logo.png",
     period: "May 2025 - Jun 2025",
     points: [
       "Engineered 5+ modular Python backend services following SOLID principles, tracked via Git, reducing code duplication by ~30%.",
@@ -16,6 +17,7 @@ const EXPERIENCE = [
     number: "02",
     title: "Web Development Intern",
     company: "MS Square Technologies (Remote)",
+    logo: "/ms-logo.png",
     period: "Jun 2024 - Aug 2024",
     points: [
       "Built 8+ responsive UI components using HTML, CSS, Bootstrap, and JavaScript ensuring cross-browser compatibility.",
@@ -57,7 +59,7 @@ const ServicesSection = () => {
               >
                 {exp.number}
               </div>
-              <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 pt-2 sm:pt-3 md:pt-4">
+              <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 pt-2 sm:pt-3 md:pt-4 w-full">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
                   <h3
                     className="font-medium uppercase text-[#0C0C0C] leading-tight"
@@ -67,11 +69,14 @@ const ServicesSection = () => {
                   </h3>
                   <span className="text-[#0C0C0C]/50 text-sm uppercase tracking-widest shrink-0">{exp.period}</span>
                 </div>
-                <p className="text-[#0C0C0C]/60 font-medium text-sm uppercase tracking-widest">{exp.company}</p>
+                <div className="flex items-center gap-3">
+                  <img src={exp.logo} alt={exp.company} className="h-8 w-auto object-contain" />
+                  <p className="text-[#0C0C0C]/60 font-medium text-sm uppercase tracking-widest">{exp.company}</p>
+                </div>
                 <ul className="flex flex-col gap-2 mt-1">
                   {exp.points.map((point) => (
                     <li key={point} className="flex items-start gap-3">
-                      <span className="text-[#0C0C0C]/40 mt-1 shrink-0 text-xs">--</span>
+                      <span className="text-[#0C0C0C]/40 mt-1 shrink-0 text-xs">-</span>
                       <span className="text-[#0C0C0C]/70 leading-relaxed" style={{ fontSize: "clamp(0.85rem, 1.4vw, 1.1rem)" }}>{point}</span>
                     </li>
                   ))}
